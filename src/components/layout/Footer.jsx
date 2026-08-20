@@ -32,7 +32,7 @@ export const Footer = () => {
             </Link>
 
             <p className="text-sm text-[#F4F8F7]/80 leading-relaxed max-w-md">
-              Evidence-based physical therapy and personalized rehabilitation care focused on physical recovery, mobility enhancement, and long-term joint health.
+              Evidence-based physical therapy and personalized physical care focused on recovery, mobility enhancement, and long-term joint health.
             </p>
 
             <div className="text-xs text-[#F4F8F7]/70 font-medium space-y-1">
@@ -52,7 +52,7 @@ export const Footer = () => {
                 { label: 'About Clinic', path: '/about' },
                 { label: 'Physiotherapy Treatments', path: '/services' },
                 { label: 'Community Care Gallery', path: '/gallery' },
-                { label: 'Contact & Appointments', path: '/contact' },
+                { label: 'Contact Us', path: '/contact' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -83,7 +83,7 @@ export const Footer = () => {
               <div className="flex items-center gap-3">
                 <MessageSquare className="w-4 h-4 text-[#1B8480] shrink-0" />
                 <a
-                  href={createWhatsAppLink(clinicData.whatsapp, "Hello! I would like to inquire about clinic appointment.")}
+                  href={createWhatsAppLink(clinicData.whatsapp, "Hello! I would like to inquire about clinic consultation.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#1B8480] font-medium transition-colors inline-flex items-center gap-1"
@@ -115,7 +115,7 @@ export const Footer = () => {
             <span>•</span>
             <span>MGR University</span>
             <span>•</span>
-            <span>Rehabilitation Care</span>
+            <span>Physical Care & Wellness</span>
           </div>
         </div>
       </Container>
