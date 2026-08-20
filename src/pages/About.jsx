@@ -70,7 +70,7 @@ export const AboutPage = () => {
                 Jeevan Physiotherapy Clinic was established to deliver compassionate, evidence-based physical therapy that addresses the root cause of movement dysfunction rather than merely masking symptoms.
               </p>
 
-              <div className="p-6 bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3 rounded-2xl">
+              <div className="p-6 bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3 rounded-lg shadow-xs">
                 <h3 className="font-heading text-xl font-bold text-[#1B8480] flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-[#1B8480]" />
                   Educational & Practice Credentials

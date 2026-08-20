@@ -51,29 +51,29 @@ export const GalleryPage = () => {
       {/* Community Values */}
       <section className="py-16 bg-white border-t thin-line-separator font-body">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
-                <Users className="w-6 h-6" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div className="p-6 rounded-lg bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3 shadow-xs">
+              <div className="w-11 h-11 rounded-md bg-[#1B8480] text-white mx-auto flex items-center justify-center shadow-xs">
+                <Users className="w-5 h-5" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Community Screening</h3>
-              <p className="text-xs text-[#6B7280]">Bringing physical assessment and posture evaluation directly to local neighborhoods.</p>
+              <h3 className="font-heading text-base sm:text-lg font-bold text-[#1E2A38]">Community Screening</h3>
+              <p className="text-xs sm:text-sm text-[#6B7280]">Bringing physical assessment and posture evaluation directly to local neighborhoods.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+            <div className="p-6 rounded-lg bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3 shadow-xs">
+              <div className="w-11 h-11 rounded-md bg-[#1B8480] text-white mx-auto flex items-center justify-center shadow-xs">
+                <Heart className="w-5 h-5 text-white" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Senior Wellness Drives</h3>
-              <p className="text-xs text-[#6B7280]">Dedicated joint mobility assessments and fall prevention guidance for elderly citizens.</p>
+              <h3 className="font-heading text-base sm:text-lg font-bold text-[#1E2A38]">Senior Wellness Drives</h3>
+              <p className="text-xs sm:text-sm text-[#6B7280]">Dedicated joint mobility assessments and fall prevention guidance for elderly citizens.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
-              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
-                <ShieldCheck className="w-6 h-6" />
+            <div className="p-6 rounded-lg bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3 shadow-xs">
+              <div className="w-11 h-11 rounded-md bg-[#1B8480] text-white mx-auto flex items-center justify-center shadow-xs">
+                <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Preventive Education</h3>
-              <p className="text-xs text-[#6B7280]">Teaching ergonomic habits, back care techniques, and safe stretching routines.</p>
+              <h3 className="font-heading text-base sm:text-lg font-bold text-[#1E2A38]">Preventive Education</h3>
+              <p className="text-xs sm:text-sm text-[#6B7280]">Teaching ergonomic habits, back care techniques, and safe stretching routines.</p>
             </div>
           </div>
         </Container>

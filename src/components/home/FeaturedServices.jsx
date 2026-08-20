@@ -16,40 +16,40 @@ export const FeaturedServices = () => {
           centered
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-5 pt-2">
           {featuredServices.map((service, idx) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              whileHover={{ y: -5 }}
-              className="group bg-[#EEF7FA] rounded-3xl overflow-hidden border border-[#176B87]/15 shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 sm:grid-cols-12"
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -3 }}
+              className="group bg-[#EEF7FA] rounded-lg overflow-hidden border border-[#176B87]/15 shadow-xs hover:shadow-md transition-all duration-300 grid grid-cols-1 sm:grid-cols-12"
             >
               {/* Image Side (5 cols) */}
-              <div className="sm:col-span-5 relative h-56 sm:h-auto overflow-hidden">
+              <div className="sm:col-span-5 relative h-52 sm:h-auto overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/40 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#176B87] text-xs font-bold shadow-sm">
+                <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/35 via-transparent to-transparent" />
+                <span className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-xs text-[#176B87] text-[11px] font-bold shadow-xs uppercase tracking-wider">
                   {service.category}
                 </span>
               </div>
 
               {/* Text Side (7 cols) */}
-              <div className="sm:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+              <div className="sm:col-span-7 p-5 sm:p-6 flex flex-col justify-between space-y-3.5">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#12343B] group-hover:text-[#176B87] transition-colors mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#12343B] group-hover:text-[#176B87] transition-colors mb-1.5 leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-[#17252A]/80 leading-relaxed mb-3">
+                  <p className="text-xs sm:text-sm text-[#17252A]/80 leading-relaxed mb-2.5">
                     {service.shortDesc}
                   </p>
-                  <p className="text-xs text-[#168F87] font-medium leading-relaxed bg-white/60 p-3 rounded-xl border border-[#168F87]/10">
+                  <p className="text-xs text-[#168F87] font-medium leading-relaxed bg-white/70 p-2.5 rounded-md border border-[#168F87]/10">
                     {service.details}
                   </p>
                 </div>

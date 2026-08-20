@@ -81,14 +81,14 @@ export const ServicesPage = () => {
             subtitle="Common inquiries about our clinical evaluation process, treatment expectations, and clinic consultations."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 bg-[#F4F8F7] border border-[#1B8480]/15 space-y-2 rounded-2xl">
-                <h3 className="font-heading text-lg font-bold text-[#1E2A38] flex items-start gap-2">
+              <div key={i} className="p-5 sm:p-6 bg-[#F4F8F7] border border-[#1B8480]/15 space-y-2 rounded-lg shadow-xs">
+                <h3 className="font-heading text-base sm:text-lg font-bold text-[#1E2A38] flex items-start gap-2">
                   <HelpCircle className="w-5 h-5 text-[#1B8480] shrink-0 mt-0.5" />
                   {faq.q}
                 </h3>
-                <p className="text-sm text-[#6B7280] leading-relaxed pl-7">
+                <p className="text-xs sm:text-sm text-[#6B7280] leading-relaxed pl-7">
                   {faq.a}
                 </p>
               </div>

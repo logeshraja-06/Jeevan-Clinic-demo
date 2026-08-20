@@ -7,7 +7,7 @@ export const Stats = () => {
   return (
     <section className="relative z-20 -mt-8 md:-mt-12 pb-12">
       <Container>
-        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-[#168F87]/15">
+        <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#168F87]/15">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
             {clinicData.stats.map((stat, idx) => (
               <motion.div
