@@ -77,7 +77,7 @@ export const AboutPage = () => {
 
               <div className="pt-2">
                 <Button href="/contact" variant="primary" size="md" showArrow>
-                  Book a Physical Evaluation
+                  Contact Us
                 </Button>
               </div>
             </div>

@@ -11,13 +11,13 @@ export const ContactPage = () => {
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#1B8480]">
               <span className="w-4 h-[2px] bg-[#1B8480]" />
-              <span>BOOK AN APPOINTMENT</span>
+              <span>GET IN TOUCH</span>
             </div>
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
               Contact Jeevan Physiotherapy Clinic
             </h1>
             <p className="font-body text-base sm:text-lg text-[#F4F8F7]/85 font-normal leading-relaxed">
-              We are here to assist you with physical evaluation, pain management, and custom rehabilitation sessions. Book an appointment or contact us directly.
+              We are here to assist you with physical evaluation, pain management, and custom rehabilitation sessions. Connect with us directly.
             </p>
           </div>
         </Container>

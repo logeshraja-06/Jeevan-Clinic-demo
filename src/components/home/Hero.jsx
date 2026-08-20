@@ -49,22 +49,22 @@ export const Hero = () => {
             className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
           >
             <Button
-              href="/contact"
+              href="/services"
               variant="primary"
               size="md"
               showArrow
               className="!rounded-md sm:!rounded-md"
             >
-              Book an Appointment
+              Explore Treatments
             </Button>
             
             <Button
-              href="/services"
+              href="/contact"
               variant="outline"
               size="md"
               className="!rounded-md sm:!rounded-md !border-white/40 !text-white hover:!bg-white hover:!text-[#1E2A38]"
             >
-              Explore Treatments
+              Contact Us
             </Button>
           </motion.div>
 

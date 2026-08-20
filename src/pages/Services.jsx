@@ -58,7 +58,7 @@ export const ServicesPage = () => {
           <SectionHeading
             eyebrow="PATIENT INFORMATION"
             title="Frequently Asked Questions"
-            subtitle="Common inquiries about our clinical evaluation process, treatment expectations, and appointment booking."
+            subtitle="Common inquiries about our clinical evaluation process, treatment expectations, and clinic consultations."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">

@@ -62,7 +62,7 @@ export const AppointmentCTA = () => {
               showArrow
               className="!bg-white !text-[#14514F] !border-white hover:!bg-[#28363F] hover:!text-white"
             >
-              Book an Appointment
+              Get in Touch
             </Button>
           </motion.div>
         </div>

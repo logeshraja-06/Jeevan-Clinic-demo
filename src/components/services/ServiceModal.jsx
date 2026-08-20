@@ -99,7 +99,7 @@ export const ServiceModal = ({ service, isOpen, onClose }) => {
                   showArrow
                   className="w-full sm:w-auto"
                 >
-                  Book Appointment
+                  Contact Clinic
                 </Button>
               </div>
             </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MessageSquare, MapPin, Clock, ArrowUpRight } from 'lucide-react';
 import { Container } from '../common/Container';
-import { Button } from '../common/Button';
 import { clinicData } from '../../data/clinic';
 import { createWhatsAppLink, createCallLink } from '../../utils/helpers';
 
@@ -104,12 +103,6 @@ export const Footer = () => {
                   Mon – Sat: 9:00 AM – 8:00 PM | Sun: Prior Appointment
                 </p>
               </div>
-            </div>
-
-            <div className="pt-2">
-              <Button href="/contact" variant="primary" size="sm" showArrow fullWidth>
-                Book Appointment
-              </Button>
             </div>
           </div>
         </div>
