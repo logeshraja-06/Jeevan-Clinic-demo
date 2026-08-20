@@ -116,7 +116,7 @@ export const TreatmentTechniques = () => {
                 />
               </AnimatePresence>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#28363F]/90 via-[#28363F]/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#28363F]/65 via-[#28363F]/10 to-transparent pointer-events-none" />
 
               <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
                 <div className="font-body text-xs font-semibold uppercase tracking-widest text-[#1B8480]">

@@ -25,8 +25,8 @@ export const Footer = () => {
                 <span className="font-heading text-xl font-extrabold text-white block">
                   JEEVAN <span className="text-[#1B8480]">PHYSIOTHERAPY</span>
                 </span>
-                <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#C9952E]">
-                  Rehabilitation Clinic
+                <span className="font-body text-[10px] font-medium uppercase tracking-[0.22em] text-[#F4F8F7]/50">
+                  Physical Care &amp; Wellness
                 </span>
               </div>
             </Link>

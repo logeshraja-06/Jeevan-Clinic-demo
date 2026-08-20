@@ -50,28 +50,28 @@
 .hero-overlay-gradient {
   background: linear-gradient(
     90deg,
-    rgba(40, 54, 63, 0.94) 0%,
-    rgba(27, 132, 128, 0.82) 42%,
-    rgba(20, 81, 79, 0.40) 78%,
-    rgba(40, 54, 63, 0.15) 100%
+    rgba(40, 54, 63, 0.72) 0%,
+    rgba(27, 132, 128, 0.45) 45%,
+    rgba(20, 81, 79, 0.18) 78%,
+    rgba(40, 54, 63, 0.08) 100%
   );
 }
 
 .hero-overlay-mobile {
   background: linear-gradient(
     180deg,
-    rgba(40, 54, 63, 0.94) 0%,
-    rgba(27, 132, 128, 0.88) 60%,
-    rgba(40, 54, 63, 0.95) 100%
+    rgba(40, 54, 63, 0.78) 0%,
+    rgba(27, 132, 128, 0.52) 50%,
+    rgba(40, 54, 63, 0.80) 100%
   );
 }
 
 .cta-banner-gradient {
   background: linear-gradient(
     135deg,
-    #1B8480 0%,
-    #14514F 60%,
-    #28363F 100%
+    rgba(27, 132, 128, 0.55) 0%,
+    rgba(20, 81, 79, 0.58) 55%,
+    rgba(40, 54, 63, 0.65) 100%
   );
 }
 

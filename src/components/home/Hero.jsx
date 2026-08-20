@@ -15,17 +15,17 @@ export const Hero = () => {
         style={{ backgroundImage: `url('/images/clinic/hero_physio.png')` }}
       />
 
-      {/* Multi-layer Gradient Overlays for Optimal Text Readability & Rich Brand Contrast */}
+      {/* Multi-layer Gradient Overlay for Optimal Text Readability & Photography Visibility */}
       <div 
         className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block" 
         style={{
-          background: 'linear-gradient(90deg, rgba(40, 54, 63, 0.95) 0%, rgba(27, 132, 128, 0.78) 42%, rgba(20, 81, 79, 0.32) 75%, rgba(40, 54, 63, 0.08) 100%)'
+          background: 'linear-gradient(90deg, rgba(40, 54, 63, 0.62) 0%, rgba(27, 132, 128, 0.32) 42%, rgba(20, 81, 79, 0.10) 72%, rgba(40, 54, 63, 0) 100%)'
         }}
       />
       <div 
         className="absolute inset-0 z-10 hero-overlay-mobile md:hidden" 
         style={{
-          background: 'linear-gradient(180deg, rgba(40, 54, 63, 0.95) 0%, rgba(27, 132, 128, 0.84) 55%, rgba(40, 54, 63, 0.96) 100%)'
+          background: 'linear-gradient(180deg, rgba(40, 54, 63, 0.82) 0%, rgba(27, 132, 128, 0.45) 50%, rgba(40, 54, 63, 0.82) 100%)'
         }}
       />
 
@@ -46,8 +46,8 @@ export const Hero = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.12] text-white"
           >
-            Restore Your <span className="font-extrabold text-white">Movement.</span><br />
-            Reclaim Your <span className="font-extrabold text-[#1B8480]">Life.</span>
+            Restore Your <span className="font-bold text-white">Movement.</span><br />
+            Reclaim Your <span className="font-bold text-[#1B8480]">Life.</span>
           </motion.h1>
 
           {/* Supporting Text (~2 lines max) */}

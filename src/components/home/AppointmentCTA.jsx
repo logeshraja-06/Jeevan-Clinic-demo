@@ -8,12 +8,12 @@ export const AppointmentCTA = () => {
     <section className="relative py-24 md:py-32 cta-banner-gradient text-white overflow-hidden font-body">
       {/* Full-width Photographic Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-1000 scale-105 opacity-25"
+        className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-1000 scale-105 opacity-55"
         style={{ backgroundImage: `url('/images/clinic/about_physio.png')` }}
       />
 
-      {/* Multi-layer Gradient Overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#1B8480]/90 via-[#14514F]/90 to-[#28363F]/90" />
+      {/* Refined Gradient Overlay — centered text zone focus, not full blanket */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#1B8480]/60 via-[#14514F]/55 to-[#28363F]/60" />
 
       <Container className="relative z-20 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
