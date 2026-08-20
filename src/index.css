@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-teal: #075A68;
+    --healthcare-blue: #167A91;
+    --dark-teal: #082F38;
+    --light-bg: #EFF8F7;
+    --text-color: #17343B;
+    --gold-accent: #C9952E;
+  }
+
+  body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Jura', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  img {
+    border-radius: 0px;
+  }
+}
+
+/* Editorial Minimal Utilities */
+.font-jura {
+  font-family: 'Jura', sans-serif;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E6C262 0%, #C9952E 50%, #A0721B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-editorial-dark {
+  background-color: #082F38;
+}
+
+.hero-overlay-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 47, 56, 0.95) 0%,
+    rgba(7, 90, 104, 0.85) 40%,
+    rgba(22, 122, 145, 0.35) 75%,
+    rgba(8, 47, 56, 0.15) 100%
+  );
+}
+
+.hero-overlay-mobile {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 47, 56, 0.92) 0%,
+    rgba(7, 90, 104, 0.88) 60%,
+    rgba(8, 47, 56, 0.95) 100%
+  );
+}
+
+.thin-line-separator {
+  border-color: rgba(22, 122, 145, 0.18);
+}
+
+.thin-line-dark {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFF8F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #075A68;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #167A91;
+}
+
+/* Accessible focus outline */
+*:focus-visible {
+  outline: 2px solid #075A68;
+  outline-offset: 3px;
+}
