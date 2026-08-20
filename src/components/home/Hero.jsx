@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
-import { clinicData } from '../../data/clinic';
 
 export const Hero = () => {
   return (

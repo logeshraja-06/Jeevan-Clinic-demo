@@ -24,9 +24,6 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -147,6 +144,7 @@ export const Navbar = () => {
                     <Link
                       key={link.name}
                       to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
                       className={`px-4 py-2.5 text-base transition-colors ${
                         isActive
                           ? 'bg-[#1B8480] text-white font-semibold rounded-lg'
@@ -165,6 +163,7 @@ export const Navbar = () => {
                   variant="primary"
                   fullWidth
                   showArrow
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book Appointment
                 </Button>
