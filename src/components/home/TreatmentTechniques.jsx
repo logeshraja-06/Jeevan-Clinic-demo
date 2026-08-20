@@ -57,7 +57,7 @@ export const TreatmentTechniques = () => {
 
         {/* 2-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* Left Column: Interactive Technique List (7 cols) */}
           <div className="lg:col-span-7 space-y-2 border-t thin-line-separator divide-y thin-line-separator">
             {techniques.map((tech, idx) => {
@@ -67,25 +67,22 @@ export const TreatmentTechniques = () => {
                   key={tech.id}
                   onClick={() => setActiveIndex(idx)}
                   onMouseEnter={() => setActiveIndex(idx)}
-                  className={`py-5 px-4 cursor-pointer transition-all duration-300 ${
-                    isActive ? 'bg-[#F4F8F7]' : 'hover:bg-gray-50'
-                  }`}
+                  className={`py-5 px-4 cursor-pointer transition-all duration-300 ${isActive ? 'bg-[#F4F8F7]' : 'hover:bg-gray-50'
+                    }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <span className={`font-heading text-lg font-bold ${isActive ? 'text-[#1B8480]' : 'text-gray-400'}`}>
                         {String(idx + 1).padStart(2, '0')}
                       </span>
-                      <h3 className={`font-heading text-xl font-bold transition-colors ${
-                        isActive ? 'text-[#1B8480]' : 'text-[#1E2A38]'
-                      }`}>
+                      <h3 className={`font-heading text-xl font-bold transition-colors ${isActive ? 'text-[#1B8480]' : 'text-[#1E2A38]'
+                        }`}>
                         {tech.title}
                       </h3>
                     </div>
 
-                    <ArrowRight className={`w-4 h-4 transition-all duration-300 ${
-                      isActive ? 'text-[#1B8480] translate-x-1.5' : 'text-gray-300'
-                    }`} />
+                    <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#1B8480] translate-x-1.5' : 'text-gray-300'
+                      }`} />
                   </div>
 
                   {isActive && (

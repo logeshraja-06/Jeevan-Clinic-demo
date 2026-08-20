@@ -36,49 +36,55 @@ export const Gallery = () => {
             return (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className={`${colSpanClass} relative overflow-hidden group cursor-pointer border border-gray-300 bg-[#28363F] shadow-sm`}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: idx * 0.08,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+                whileHover={{ y: -6, scale: 1.01 }}
+                className={`${colSpanClass} relative overflow-hidden group cursor-pointer border border-gray-200/80 bg-[#28363F] shadow-md rounded-2xl`}
                 onClick={() => setSelectedImage(item)}
               >
                 <div className={`w-full ${heightClass} relative overflow-hidden`}>
+                  {/* Clean Full-Fill Image with Smooth Hover Zoom */}
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03] rounded-none"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#28363F]/95 via-[#28363F]/35 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
+                  {/* Smooth Flush Bottom Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#28363F] via-[#28363F]/85 to-transparent/10 opacity-90 group-hover:opacity-95 transition-opacity duration-500 ease-out z-10" />
 
-                  {/* Category Tag */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3.5 py-1 bg-[#1B8480] text-white font-body text-xs font-semibold tracking-wider rounded-full">
+                  {/* Top-Left Category Tag */}
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="px-3.5 py-1 bg-[#1B8480] group-hover:bg-[#14514F] text-white font-body text-xs font-semibold tracking-wider rounded-full shadow-md transition-all duration-300 group-hover:scale-105 inline-block">
                       {item.category}
                     </span>
                   </div>
 
-                  {/* Hover Expand Icon */}
-                  <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Top-Right Hover Expand Icon */}
+                  <div className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:scale-110 border border-white/20 backdrop-blur-sm">
                     <Maximize2 className="w-4 h-4" />
                   </div>
 
-                  {/* Bottom Caption Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-1">
-                    <h3 className="font-heading text-lg sm:text-xl font-extrabold line-clamp-1 mb-1">
+                  {/* Flush Bottom Integrated Caption Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-20 text-white transition-transform duration-500 ease-out group-hover:-translate-y-1">
+                    <h3 className="font-heading text-lg sm:text-xl font-extrabold text-white leading-tight mb-1.5 tracking-tight drop-shadow-sm">
                       {item.title}
                     </h3>
-                    <p className="font-body text-xs text-[#F4F8F7]/85 line-clamp-2 leading-relaxed font-normal">
+                    <p className="font-body text-xs sm:text-sm text-[#F4F8F7]/90 line-clamp-2 leading-relaxed font-normal">
                       {item.caption}
                     </p>
 
-                    <div className="mt-3 pt-2 border-t thin-line-dark flex items-center justify-between font-body text-[11px] text-[#1B8480] font-semibold">
-                      <span className="flex items-center gap-1 text-white/90">
-                        <MapPin className="w-3 h-3 text-[#1B8480]" /> {item.location}
+                    <div className="mt-3.5 pt-2.5 border-t border-white/15 flex items-center justify-between font-body text-xs font-medium text-[#F4F8F7]/80">
+                      <span className="flex items-center gap-1.5 text-white/90">
+                        <MapPin className="w-3.5 h-3.5 text-[#1B8480] shrink-0" /> {item.location}
                       </span>
-                      <span>{item.date}</span>
+                      <span className="text-[#1B8480] font-bold tracking-wide">{item.date}</span>
                     </div>
                   </div>
                 </div>
@@ -103,6 +109,7 @@ export const Gallery = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                 className="relative z-10 w-full max-w-4xl bg-white shadow-2xl overflow-hidden border border-white/20 my-8 rounded-2xl"
               >
                 <button
