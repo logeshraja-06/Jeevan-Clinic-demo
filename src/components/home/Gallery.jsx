@@ -17,21 +17,14 @@ export const Gallery = () => {
           subtitle="Supporting movement, awareness and better health in the community."
         />
 
-        {/* Editorial Masonry Grid */}
+        {/* Editorial Masonry Grid (Balanced 6-6 and 4-4-4 Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 pt-2">
           {campGalleryData.map((item, idx) => {
+            // Balanced column spans: Row 1 has two 6-col cards; Row 2 has three 4-col cards
             const colSpanClass =
-              idx === 0
-                ? 'lg:col-span-7 md:col-span-2'
-                : idx === 1
-                ? 'lg:col-span-5 md:col-span-1'
-                : idx === 2
-                ? 'lg:col-span-4 md:col-span-1'
-                : idx === 3
-                ? 'lg:col-span-4 md:col-span-1'
-                : 'lg:col-span-4 md:col-span-2';
-
-            const heightClass = idx === 0 ? 'h-80 md:h-[430px]' : 'h-72 md:h-80';
+              idx === 0 || idx === 1
+                ? 'lg:col-span-6 md:col-span-1'
+                : 'lg:col-span-4 md:col-span-1';
 
             return (
               <motion.div
@@ -45,55 +38,43 @@ export const Gallery = () => {
                   ease: [0.25, 0.1, 0.25, 1],
                 }}
                 whileHover={{ y: -6, scale: 1.01 }}
-                className={`${colSpanClass} relative overflow-hidden group cursor-pointer border border-gray-200/80 bg-[#28363F] shadow-md rounded-2xl`}
+                className={`${colSpanClass} relative w-full h-72 sm:h-80 md:h-88 lg:h-96 overflow-hidden group cursor-pointer border border-gray-200/80 bg-[#28363F] shadow-md rounded-2xl`}
                 onClick={() => setSelectedImage(item)}
               >
-                <div className={`w-full ${heightClass} relative overflow-hidden`}>
-                  {/* Clean Full-Fill Image with Smooth Hover Zoom */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
+                {/* Clean Edge-to-Edge Full-Fill Image with Smooth Hover Zoom */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-                  {/* Smooth Flush Bottom Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#28363F] via-[#28363F]/85 to-transparent/10 opacity-90 group-hover:opacity-95 transition-opacity duration-500 ease-out z-10" />
+                {/* Concentrated Bottom Gradient Overlay (~45% height for maximum photo visibility) */}
+                <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-[#28363F]/95 via-[#28363F]/50 to-transparent pointer-events-none z-10 transition-opacity duration-500 ease-out" />
 
-                  {/* Top-Left Category Tag */}
-                  <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3.5 py-1 bg-[#1B8480] group-hover:bg-[#14514F] text-white font-body text-xs font-semibold tracking-wider rounded-full shadow-md transition-all duration-300 group-hover:scale-105 inline-block">
-                      {item.category}
-                    </span>
-                  </div>
+                {/* Top-Left Category Tag */}
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="px-3.5 py-1 bg-[#1B8480] group-hover:bg-[#14514F] text-white font-body text-xs font-semibold tracking-wider rounded-full shadow-md transition-all duration-300 group-hover:scale-105 inline-block">
+                    {item.category}
+                  </span>
+                </div>
 
-                  {/* Top-Right Hover Expand Icon */}
-                  <div className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:scale-110 border border-white/20 backdrop-blur-sm">
-                    <Maximize2 className="w-4 h-4" />
-                  </div>
+                {/* Top-Right Hover Expand Icon */}
+                <div className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:scale-110 border border-white/20 backdrop-blur-sm">
+                  <Maximize2 className="w-4 h-4" />
+                </div>
 
-                  {/* Flush Bottom Integrated Caption Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-20 text-white transition-transform duration-500 ease-out group-hover:-translate-y-1">
-                    <h3 className="font-heading text-lg sm:text-xl font-extrabold text-white leading-tight mb-1.5 tracking-tight drop-shadow-sm">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-xs sm:text-sm text-[#F4F8F7]/90 line-clamp-2 leading-relaxed font-normal">
-                      {item.caption}
-                    </p>
-
-                    <div className="mt-3.5 pt-2.5 border-t border-white/15 flex items-center justify-between font-body text-xs font-medium text-[#F4F8F7]/80">
-                      <span className="flex items-center gap-1.5 text-white/90">
-                        <MapPin className="w-3.5 h-3.5 text-[#1B8480] shrink-0" /> {item.location}
-                      </span>
-                      <span className="text-[#1B8480] font-bold tracking-wide">{item.date}</span>
-                    </div>
-                  </div>
+                {/* Clean Minimal Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-20 text-white transition-transform duration-500 ease-out group-hover:-translate-y-1">
+                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-extrabold text-white leading-tight tracking-tight drop-shadow-md">
+                    {item.title}
+                  </h3>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Lightbox Modal */}
+        {/* Lightbox Modal (Displays Full Details on Click) */}
         <AnimatePresence>
           {selectedImage && (
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
