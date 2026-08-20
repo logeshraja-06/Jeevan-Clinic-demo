@@ -83,9 +83,6 @@ export const WhyChooseUs = () => {
                   <span className="font-heading text-4xl sm:text-5xl font-extrabold text-[#1B8480]">
                     {currentItem.num}
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#C9952E] bg-[#C9952E]/15 px-3.5 py-1.5 rounded-full border border-[#C9952E]/30">
-                    Pillar {currentItem.num} of 04
-                  </span>
                 </div>
 
                 <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">

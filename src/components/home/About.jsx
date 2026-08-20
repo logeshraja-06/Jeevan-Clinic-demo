@@ -21,7 +21,7 @@ export const About = () => {
               <img
                 src="/images/clinic/about_physio2.png"
                 alt="Physiotherapy session at Jeevan Physiotherapy Clinic"
-                className="w-full h-[340px] sm:h-[460px] lg:h-[520px] object-cover object-top rounded-none transition-all duration-300"
+                className="w-full h-auto max-h-[520px] object-contain sm:object-cover object-top rounded-none transition-all duration-300 mx-auto"
               />
             </div>
           </motion.div>
