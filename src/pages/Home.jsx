@@ -5,7 +5,6 @@ import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { TreatmentTechniques } from '../components/home/TreatmentTechniques';
 import { ServiceGrid } from '../components/services/ServiceGrid';
 import { Gallery } from '../components/home/Gallery';
-import { Qualification } from '../components/home/Qualification';
 import { AppointmentCTA } from '../components/home/AppointmentCTA';
 import { Contact } from '../components/home/Contact';
 import { Container } from '../components/common/Container';
@@ -38,7 +37,6 @@ export const Home = () => {
       </section>
 
       <Gallery />
-      <Qualification />
       <AppointmentCTA />
       <Contact />
     </main>

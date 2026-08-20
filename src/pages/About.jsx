@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from '../components/common/Container';
-import { Qualification } from '../components/home/Qualification';
 import { AppointmentCTA } from '../components/home/AppointmentCTA';
 import { Button } from '../components/common/Button';
 import { clinicData } from '../data/clinic';
@@ -105,7 +104,6 @@ export const AboutPage = () => {
         </Container>
       </section>
 
-      <Qualification />
       <AppointmentCTA />
     </main>
   );
