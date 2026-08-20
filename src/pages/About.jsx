@@ -55,7 +55,7 @@ export const AboutPage = () => {
                 <img
                   src="/images/clinic/about_physio.png"
                   alt="Physiotherapy evaluation session"
-                  className="w-full h-[500px] object-cover rounded-none"
+                  className="w-full h-[340px] sm:h-[460px] lg:h-[520px] object-cover object-top rounded-none transition-all duration-300"
                 />
               </div>
             </div>

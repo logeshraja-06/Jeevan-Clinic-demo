@@ -19,9 +19,9 @@ export const About = () => {
           >
             <div className="relative border border-gray-200 shadow-md">
               <img
-                src="/images/clinic/about_physio.png"
+                src="/images/clinic/about_physio2.png"
                 alt="Physiotherapy session at Jeevan Physiotherapy Clinic"
-                className="w-full h-[460px] sm:h-[520px] object-cover rounded-none"
+                className="w-full h-[340px] sm:h-[460px] lg:h-[520px] object-cover object-top rounded-none transition-all duration-300"
               />
             </div>
           </motion.div>
