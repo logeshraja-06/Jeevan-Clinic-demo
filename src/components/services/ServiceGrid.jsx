@@ -104,7 +104,7 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
                 CONDITIONS WE HELP WITH
               </h3>
             </div>
-            <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
+            <div className="overflow-hidden shadow-sm font-body">
               {conditions.map((service, idx) => (
                 <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
               ))}
@@ -119,7 +119,7 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
                 TREATMENT TECHNIQUES
               </h3>
             </div>
-            <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
+            <div className="overflow-hidden shadow-sm font-body">
               {techniques.map((service, idx) => (
                 <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
               ))}
@@ -127,7 +127,7 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
           </div>
         </div>
       ) : (
-        <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
+        <div className="overflow-hidden shadow-sm font-body">
           {displayedServices.map((service, idx) => (
             <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
           ))}
