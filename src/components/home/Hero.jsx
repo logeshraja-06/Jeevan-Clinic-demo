@@ -6,15 +6,34 @@ import { Button } from '../common/Button';
 export const Hero = () => {
   return (
     <section className="relative w-full h-[calc(100vh-76px)] sm:h-[calc(100vh-80px)] min-h-[560px] max-h-[820px] flex flex-col justify-between pt-20 md:pt-24 pb-4 md:pb-6 bg-[#28363F] text-white overflow-hidden mt-[76px] sm:mt-[80px]">
-      {/* Full-width Photographic Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:bg-[position:70%_center] z-0 transition-transform duration-1000 scale-100"
+      {/* Full-width Photographic Background with Slow Ken Burns Zoom Effect */}
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.07 }}
+        transition={{ duration: 18, ease: [0.25, 1, 0.5, 1] }}
+        className="absolute inset-0 bg-cover bg-center md:bg-[position:70%_center] z-0 transform-gpu contrast-[1.03] brightness-[0.97]"
         style={{ backgroundImage: `url('/images/clinic/hero_physio.png')` }}
       />
 
-      {/* Multi-layer Gradient Overlay for Optimal Text Readability & Photography Visibility */}
-      <div className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block" />
-      <div className="absolute inset-0 z-10 hero-overlay-mobile md:hidden" />
+      {/* Multi-layer Gradient Overlays for Optimal Text Readability & Rich Brand Contrast */}
+      <div 
+        className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block" 
+        style={{
+          background: 'linear-gradient(90deg, rgba(40, 54, 63, 0.95) 0%, rgba(27, 132, 128, 0.78) 42%, rgba(20, 81, 79, 0.32) 75%, rgba(40, 54, 63, 0.08) 100%)'
+        }}
+      />
+      <div 
+        className="absolute inset-0 z-10 hero-overlay-mobile md:hidden" 
+        style={{
+          background: 'linear-gradient(180deg, rgba(40, 54, 63, 0.95) 0%, rgba(27, 132, 128, 0.84) 55%, rgba(40, 54, 63, 0.96) 100%)'
+        }}
+      />
+
+      {/* Subtle Radial Vignette for Depth */}
+      <div className="absolute inset-0 z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-transparent via-[#28363F]/20 to-[#28363F]/60 pointer-events-none" />
+
+      {/* Soft Bottom Fade for Smooth Transition into Next Section */}
+      <div className="absolute inset-x-0 bottom-0 h-28 z-10 bg-gradient-to-t from-[#28363F] via-[#28363F]/60 to-transparent pointer-events-none" />
 
       {/* Main Content Area */}
       <Container className="relative z-20 my-auto w-full">

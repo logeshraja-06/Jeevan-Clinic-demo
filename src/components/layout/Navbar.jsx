@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, MessageSquare, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Container } from '../common/Container';
-import { clinicData } from '../../data/clinic';
-import { createWhatsAppLink } from '../../utils/helpers';
+import { Button } from '../common/Button';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,23 +90,14 @@ export const Navbar = () => {
 
           {/* Right Zone: Secondary Action CTAs */}
           <div className="hidden md:flex items-center justify-end flex-1 gap-2.5 lg:gap-3 shrink-0">
-            <a
-              href={createWhatsAppLink(clinicData.whatsapp, "Hello! I would like to inquire about booking an appointment.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#1B8480] hover:text-[#14514F] bg-[#F4F8F7] hover:bg-[#1B8480]/10 rounded-full border border-[#1B8480]/20 transition-colors shrink-0"
-              aria-label="Chat on WhatsApp"
-            >
-              <MessageSquare className="w-3.5 h-3.5 text-[#1B8480]" />
-              <span className="hidden xl:inline font-medium">WhatsApp</span>
-            </a>
-
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-1 px-3.5 py-1.5 text-xs font-semibold text-white bg-[#1B8480] hover:bg-[#14514F] rounded-full shadow-xs hover:shadow transition-all group shrink-0"
-            >
-              <span className="whitespace-nowrap">Book Appointment</span>
-              <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+            <Link to="/contact">
+              <Button
+                variant="primary"
+                size="sm"
+                showArrow
+              >
+                Contact Us
+              </Button>
             </Link>
           </div>
 
@@ -161,23 +151,19 @@ export const Navbar = () => {
 
               {/* Mobile Action CTAs */}
               <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
-                <a
-                  href={createWhatsAppLink(clinicData.whatsapp, "Hello! I would like to inquire about booking an appointment.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-2 text-xs font-semibold text-[#1B8480] bg-[#F4F8F7] rounded-lg border border-[#1B8480]/20"
-                >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>WhatsApp Inquiry</span>
-                </a>
                 <Link
                   to="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-1.5 w-full py-2 text-xs font-semibold text-white bg-[#1B8480] rounded-lg"
+                  className="w-full block"
                 >
-                  <span>Book Appointment</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    fullWidth
+                    showArrow
+                  >
+                    Contact Us
+                  </Button>
                 </Link>
               </div>
             </Container>
