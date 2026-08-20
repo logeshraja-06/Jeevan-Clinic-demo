@@ -17,14 +17,14 @@ export const AboutPage = () => {
         />
 
         {/* Multi-layer Gradient Overlay for Text Readability & Brand Consistency */}
-        <div 
-          className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block" 
+        <div
+          className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block"
           style={{
             background: 'linear-gradient(90deg, rgba(40, 54, 63, 0.96) 0%, rgba(27, 132, 128, 0.85) 50%, rgba(40, 54, 63, 0.70) 100%)'
           }}
         />
-        <div 
-          className="absolute inset-0 z-10 hero-overlay-mobile md:hidden" 
+        <div
+          className="absolute inset-0 z-10 hero-overlay-mobile md:hidden"
           style={{
             background: 'linear-gradient(180deg, rgba(40, 54, 63, 0.96) 0%, rgba(27, 132, 128, 0.88) 60%, rgba(40, 54, 63, 0.96) 100%)'
           }}

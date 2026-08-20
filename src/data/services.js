@@ -14,7 +14,7 @@ export const featuredServices = [
     category: "Specialized Recovery",
     shortDesc: "Recovery-focused physiotherapy following surgeries, fractures, trauma, and neurological conditions.",
     icon: "HeartPulse",
-    image: "/images/clinic/about_physio.png",
+    image: "/images/clinic/about_physio1.png",
     details: "Structured multi-phase rehabilitation pathways to rebuild nerve-muscle coordination, joint strength, and functional independence."
   },
   {

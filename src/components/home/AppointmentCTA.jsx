@@ -9,7 +9,7 @@ export const AppointmentCTA = () => {
       {/* Full-width Photographic Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-1000 scale-105 opacity-55"
-        style={{ backgroundImage: `url('/images/clinic/about_physio.png')` }}
+        style={{ backgroundImage: `url('/images/clinic/about_physio1.png')` }}
       />
 
       {/* Refined Gradient Overlay — centered text zone focus, not full blanket */}

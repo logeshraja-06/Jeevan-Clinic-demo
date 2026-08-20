@@ -16,7 +16,7 @@ export const TreatmentTechniques = () => {
       id: "myofascial-release",
       title: "Myofascial Release Therapy",
       shortDesc: "Targeted soft tissue release eliminating fascial restrictions, trigger points, and chronic muscular tension.",
-      image: "/images/clinic/about_physio.png"
+      image: "/images/clinic/about_physio1.png"
     },
     {
       id: "therapeutic-taping",

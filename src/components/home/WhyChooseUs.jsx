@@ -45,7 +45,7 @@ export const WhyChooseUs = () => {
       {/* Photographic Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 opacity-25 mix-blend-luminosity transform scale-105"
-        style={{ backgroundImage: `url('/images/clinic/about_physio.png')` }}
+        style={{ backgroundImage: `url('/images/clinic/about_physio1.png')` }}
       />
 
       {/* Multi-layer Dark Teal & Navy Gradient Overlay */}

@@ -8,7 +8,7 @@ export const About = () => {
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Sharp Photography (5 cols) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
