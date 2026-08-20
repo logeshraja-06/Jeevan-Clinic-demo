@@ -17,9 +17,9 @@ export const SectionHeading = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#C9952E] mb-3"
+          className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#1B8480] mb-3"
         >
-          <span className="w-4 h-[1px] bg-[#C9952E]"></span>
+          <span className="w-4 h-[2px] bg-[#1B8480]"></span>
           <span>{eyebrow}</span>
         </motion.div>
       )}
@@ -30,8 +30,8 @@ export const SectionHeading = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className={`font-jura text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] ${
-            light ? 'text-white' : 'text-[#082F38]'
+          className={`font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight ${
+            light ? 'text-white' : 'text-[#1E2A38]'
           }`}
         >
           {title}
@@ -44,9 +44,9 @@ export const SectionHeading = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`font-quicksand mt-4 text-base md:text-lg max-w-2xl font-normal leading-relaxed ${
+          className={`font-body mt-4 text-base md:text-lg max-w-2xl font-normal leading-relaxed ${
             centered ? 'mx-auto' : ''
-          } ${light ? 'text-[#EFF8F7]/80' : 'text-[#17343B]/80'}`}
+          } ${light ? 'text-[#F4F8F7]/85' : 'text-[#6B7280]'}`}
         >
           {subtitle}
         </motion.p>

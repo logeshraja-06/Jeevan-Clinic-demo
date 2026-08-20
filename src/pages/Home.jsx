@@ -14,14 +14,14 @@ import { Button } from '../components/common/Button';
 
 export const Home = () => {
   return (
-    <main className="space-y-0 bg-[#EFF8F7]">
+    <main className="space-y-0 bg-white">
       <Hero />
       <About />
       <WhyChooseUs />
       <TreatmentTechniques />
       
       {/* Services List Preview */}
-      <section className="py-20 md:py-28 bg-[#EFF8F7] relative border-t thin-line-separator">
+      <section className="py-20 md:py-28 bg-[#F4F8F7] relative border-t thin-line-separator">
         <Container>
           <SectionHeading
             eyebrow="TREATMENTS & REHABILITATION"
@@ -30,7 +30,7 @@ export const Home = () => {
           />
           <ServiceGrid limit={8} showSearch={false} />
           <div className="mt-12 text-center">
-            <Button href="/services" variant="gold" size="lg" showArrow>
+            <Button href="/services" variant="primary" size="lg" showArrow>
               View All 17+ Conditions & Treatment Techniques
             </Button>
           </div>

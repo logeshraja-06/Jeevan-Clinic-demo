@@ -6,18 +6,19 @@ import { Users, Heart, ShieldCheck } from 'lucide-react';
 
 export const GalleryPage = () => {
   return (
-    <main className="pt-24 pb-16 space-y-16 bg-[#EEF7FA]">
+    <main className="pt-20 space-y-0 bg-[#F4F8F7]">
       {/* Header Banner */}
-      <section className="bg-gradient-to-r from-[#12343B] via-[#176B87] to-[#168F87] text-white py-16 md:py-20 relative overflow-hidden">
+      <section className="bg-[#28363F] text-white py-20 md:py-24 relative overflow-hidden">
         <Container>
           <div className="max-w-3xl space-y-4">
-            <span className="px-3.5 py-1.5 rounded-full bg-[#C9952E]/20 text-[#C9952E] font-bold text-xs uppercase tracking-widest border border-[#C9952E]/30">
-              OUTREACH & COMMUNITY HEALTH
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            <div className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#1B8480]">
+              <span className="w-4 h-[2px] bg-[#1B8480]" />
+              <span>OUTREACH & COMMUNITY HEALTH</span>
+            </div>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
               Camp & Community Care Gallery
             </h1>
-            <p className="text-base sm:text-lg text-[#EEF7FA]/90 leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-[#F4F8F7]/85 font-normal leading-relaxed">
               Jeevan Physiotherapy Clinic actively conducts free physical health screening camps, posture awareness drives, and community physical wellness workshops.
             </p>
           </div>
@@ -25,34 +26,34 @@ export const GalleryPage = () => {
       </section>
 
       {/* Gallery Grid */}
-      <Gallery isFullPage={true} />
+      <Gallery />
 
       {/* Community Values */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white border-t thin-line-separator font-body">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 rounded-2xl bg-[#EEF7FA] border border-[#176B87]/15 space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-[#176B87] text-white mx-auto flex items-center justify-center">
+            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
+              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-[#12343B]">Community Screening</h3>
-              <p className="text-xs text-gray-600">Bringing physical assessment and posture evaluation directly to local neighborhoods.</p>
+              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Community Screening</h3>
+              <p className="text-xs text-[#6B7280]">Bringing physical assessment and posture evaluation directly to local neighborhoods.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#EAF6F4] border border-[#168F87]/15 space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-[#168F87] text-white mx-auto flex items-center justify-center">
-                <Heart className="w-6 h-6 text-[#C9952E]" />
+            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
+              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
+                <Heart className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#12343B]">Senior Wellness Drives</h3>
-              <p className="text-xs text-gray-600">Dedicated joint mobility assessments and fall prevention guidance for elderly citizens.</p>
+              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Senior Wellness Drives</h3>
+              <p className="text-xs text-[#6B7280]">Dedicated joint mobility assessments and fall prevention guidance for elderly citizens.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#EEF7FA] border border-[#176B87]/15 space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-[#C9952E] text-white mx-auto flex items-center justify-center">
+            <div className="p-6 rounded-2xl bg-[#F4F8F7] border border-[#1B8480]/15 space-y-3">
+              <div className="w-12 h-12 rounded-full bg-[#1B8480] text-white mx-auto flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-[#12343B]">Preventive Education</h3>
-              <p className="text-xs text-gray-600">Teaching ergonomic habits, back care techniques, and safe stretching routines.</p>
+              <h3 className="font-heading text-lg font-bold text-[#1E2A38]">Preventive Education</h3>
+              <p className="text-xs text-[#6B7280]">Teaching ergonomic habits, back care techniques, and safe stretching routines.</p>
             </div>
           </div>
         </Container>

@@ -59,7 +59,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-28 bg-white relative overflow-hidden font-body">
       <Container>
         <SectionHeading
           eyebrow="APPOINTMENT & INQUIRIES"
@@ -70,70 +70,70 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 pt-2">
           
           {/* Left Column: Direct Contact & Location Info (5 cols) */}
-          <div className="lg:col-span-5 space-y-6 font-quicksand">
+          <div className="lg:col-span-5 space-y-6">
             
             {/* Direct Phone Line */}
-            <div className="p-6 border border-gray-200 bg-[#EFF8F7] space-y-2">
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#075A68] flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#075A68]" />
+            <div className="p-6 border border-gray-200 bg-[#F4F8F7] space-y-2 rounded-2xl">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#1B8480] flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#1B8480]" />
                 Direct Clinic Line
               </div>
               <a
                 href={createCallLink(clinicData.phoneRaw)}
-                className="font-jura text-2xl font-bold text-[#082F38] hover:text-[#075A68] transition-colors block"
+                className="font-heading text-2xl font-extrabold text-[#1E2A38] hover:text-[#1B8480] transition-colors block"
               >
                 {clinicData.phone}
               </a>
-              <p className="text-xs text-gray-600">Click to initiate a phone call with clinic staff</p>
+              <p className="text-xs text-[#6B7280]">Click to initiate a phone call with clinic staff</p>
             </div>
 
             {/* WhatsApp Direct */}
-            <div className="p-6 border border-gray-200 bg-white space-y-2">
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#167A91] flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-[#167A91]" />
+            <div className="p-6 border border-gray-200 bg-white space-y-2 rounded-2xl shadow-sm">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#1B8480] flex items-center gap-2">
+                <MessageSquare className="w-4 h-4 text-[#1B8480]" />
                 WhatsApp Consultation
               </div>
               <a
                 href={createWhatsAppLink(clinicData.whatsapp, "Hello! I would like to inquire about booking an appointment.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-jura text-xl font-bold text-[#082F38] hover:text-[#167A91] transition-colors flex items-center gap-1.5"
+                className="font-heading text-xl font-bold text-[#1E2A38] hover:text-[#1B8480] transition-colors flex items-center gap-1.5"
               >
-                Chat on WhatsApp <ExternalLink className="w-4 h-4 text-[#C9952E]" />
+                Chat on WhatsApp <ExternalLink className="w-4 h-4 text-[#1B8480]" />
               </a>
-              <p className="text-xs text-gray-600">Fast messaging for appointment booking & queries</p>
+              <p className="text-xs text-[#6B7280]">Fast messaging for appointment booking & queries</p>
             </div>
 
             {/* Location & Hours */}
-            <div className="p-6 border border-gray-200 bg-white space-y-4">
+            <div className="p-6 border border-gray-200 bg-white space-y-4 rounded-2xl shadow-sm">
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-[#C9952E] flex items-center gap-2 mb-1">
-                  <MapPin className="w-4 h-4 text-[#C9952E]" />
+                <div className="text-xs font-bold uppercase tracking-wider text-[#1B8480] flex items-center gap-2 mb-1">
+                  <MapPin className="w-4 h-4 text-[#1B8480]" />
                   Clinic Address
                 </div>
-                <p className="text-sm font-semibold text-[#082F38] leading-relaxed">
+                <p className="text-sm font-semibold text-[#1E2A38] leading-relaxed">
                   {clinicData.address}, {clinicData.city}, {clinicData.state} - {clinicData.pincode}
                 </p>
                 <a
                   href={clinicData.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#075A68] hover:underline mt-1"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#1B8480] hover:underline mt-1"
                 >
                   View on Google Maps <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
 
               <div className="pt-3 border-t thin-line-separator">
-                <div className="text-xs font-semibold uppercase tracking-wider text-[#075A68] flex items-center gap-2 mb-2">
-                  <Clock className="w-4 h-4 text-[#075A68]" />
+                <div className="text-xs font-bold uppercase tracking-wider text-[#1B8480] flex items-center gap-2 mb-2">
+                  <Clock className="w-4 h-4 text-[#1B8480]" />
                   Operating Hours
                 </div>
-                <div className="space-y-1 text-xs sm:text-sm text-[#17343B]">
+                <div className="space-y-1 text-xs sm:text-sm text-[#1E2A38]">
                   {clinicData.workingHours.map((schedule, i) => (
                     <div key={i} className="flex justify-between items-center py-1">
-                      <span className="font-semibold">{schedule.days}</span>
-                      <span className="font-bold text-[#075A68]">{schedule.time}</span>
+                      <span className="font-semibold text-[#6B7280]">{schedule.days}</span>
+                      <span className="font-bold text-[#1B8480]">{schedule.time}</span>
                     </div>
                   ))}
                 </div>
@@ -144,12 +144,12 @@ export const Contact = () => {
 
           {/* Right Column: Appointment Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="bg-[#EFF8F7] p-8 md:p-10 border border-[#075A68]/20 font-quicksand">
+            <div className="bg-[#F4F8F7] p-8 md:p-10 border border-[#1B8480]/20 rounded-2xl shadow-sm">
               <div className="mb-6">
-                <h3 className="font-jura text-2xl sm:text-3xl font-bold text-[#082F38]">
+                <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#1E2A38]">
                   Request an Appointment
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-600 mt-1 font-normal">
+                <p className="text-xs sm:text-sm text-[#6B7280] mt-1 font-normal">
                   Provide your details and selected treatment interest. Our clinic representative will reach out promptly to confirm your consultation schedule.
                 </p>
               </div>
@@ -158,16 +158,16 @@ export const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-white p-8 text-center border border-[#075A68]/30 space-y-4 shadow-sm"
+                  className="bg-white p-8 text-center border border-[#1B8480]/30 space-y-4 rounded-xl shadow-sm"
                 >
-                  <div className="w-12 h-12 bg-[#EFF8F7] text-[#075A68] mx-auto flex items-center justify-center">
-                    <CheckCircle className="w-8 h-8 text-[#075A68]" />
+                  <div className="w-12 h-12 bg-[#F4F8F7] text-[#1B8480] mx-auto flex items-center justify-center rounded-full">
+                    <CheckCircle className="w-8 h-8 text-[#1B8480]" />
                   </div>
-                  <h4 className="font-jura text-2xl font-bold text-[#082F38]">
+                  <h4 className="font-heading text-2xl font-bold text-[#1E2A38]">
                     Appointment Request Logged
                   </h4>
-                  <p className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="font-bold text-[#075A68]">{formData.name}</span>. Your request for <span className="font-bold text-[#167A91]">{formData.service}</span> has been received. Our team will contact you at {formData.phone} shortly.
+                  <p className="text-sm text-[#6B7280] max-w-md mx-auto leading-relaxed">
+                    Thank you, <span className="font-bold text-[#1B8480]">{formData.name}</span>. Your request for <span className="font-bold text-[#1B8480]">{formData.service}</span> has been received. Our team will contact you at {formData.phone} shortly.
                   </p>
                   <div className="pt-2">
                     <button
@@ -175,7 +175,7 @@ export const Contact = () => {
                         setIsSubmitted(false);
                         setFormData({ name: '', phone: '', email: '', service: '', preferredDate: '', message: '' });
                       }}
-                      className="px-6 py-2.5 text-xs font-bold text-[#075A68] bg-[#EFF8F7] hover:bg-[#075A68] hover:text-white rounded-[4px] transition-colors"
+                      className="px-6 py-2.5 text-xs font-bold text-[#1B8480] bg-[#F4F8F7] hover:bg-[#1B8480] hover:text-white rounded-full transition-colors"
                     >
                       Submit Another Inquiry
                     </button>
@@ -185,7 +185,7 @@ export const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -194,9 +194,9 @@ export const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Ramesh Sharma"
-                        className={`w-full px-4 py-3 rounded-[4px] bg-white border ${
+                        className={`w-full px-4 py-3 rounded-lg bg-white border ${
                           errors.name ? 'border-red-500' : 'border-gray-300'
-                        } focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]`}
+                        } focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]`}
                       />
                       {errors.name && (
                         <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -206,7 +206,7 @@ export const Contact = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -215,9 +215,9 @@ export const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="e.g. +91 98765 43210"
-                        className={`w-full px-4 py-3 rounded-[4px] bg-white border ${
+                        className={`w-full px-4 py-3 rounded-lg bg-white border ${
                           errors.phone ? 'border-red-500' : 'border-gray-300'
-                        } focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]`}
+                        } focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]`}
                       />
                       {errors.phone && (
                         <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -229,7 +229,7 @@ export const Contact = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                         Email Address (Optional)
                       </label>
                       <input
@@ -238,9 +238,9 @@ export const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="name@example.com"
-                        className={`w-full px-4 py-3 rounded-[4px] bg-white border ${
+                        className={`w-full px-4 py-3 rounded-lg bg-white border ${
                           errors.email ? 'border-red-500' : 'border-gray-300'
-                        } focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]`}
+                        } focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]`}
                       />
                       {errors.email && (
                         <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
@@ -250,16 +250,16 @@ export const Contact = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                         Treatment / Condition <span className="text-red-500">*</span>
                       </label>
                       <select
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className={`w-full px-4 py-3 rounded-[4px] bg-white border ${
+                        className={`w-full px-4 py-3 rounded-lg bg-white border ${
                           errors.service ? 'border-red-500' : 'border-gray-300'
-                        } focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]`}
+                        } focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]`}
                       >
                         <option value="">-- Select Service --</option>
                         {allServices.map((srv) => (
@@ -277,7 +277,7 @@ export const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                       Preferred Date
                     </label>
                     <input
@@ -285,12 +285,12 @@ export const Contact = () => {
                       name="preferredDate"
                       value={formData.preferredDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-[4px] bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#082F38] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#1E2A38] uppercase tracking-wider mb-1.5">
                       Symptom Details / Message
                     </label>
                     <textarea
@@ -299,7 +299,7 @@ export const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Briefly describe your symptoms or preferred consultation timing..."
-                      className="w-full px-4 py-3 rounded-[4px] bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#075A68] text-sm text-[#17343B]"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#1B8480] text-sm text-[#1E2A38]"
                     />
                   </div>
 

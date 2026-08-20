@@ -26,19 +26,19 @@ export const ServicesPage = () => {
   ];
 
   return (
-    <main className="pt-20 space-y-0 bg-[#EFF8F7]">
+    <main className="pt-20 space-y-0 bg-[#F4F8F7]">
       {/* Header Banner */}
-      <section className="bg-[#082F38] text-white py-20 md:py-24 relative overflow-hidden">
+      <section className="bg-[#28363F] text-white py-20 md:py-24 relative overflow-hidden">
         <Container>
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 font-quicksand text-xs font-semibold uppercase tracking-[0.2em] text-[#C9952E]">
-              <span className="w-4 h-[1px] bg-[#C9952E]" />
+            <div className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#1B8480]">
+              <span className="w-4 h-[2px] bg-[#1B8480]" />
               <span>CLINICAL CATALOG</span>
             </div>
-            <h1 className="font-jura text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
               Physiotherapy Treatments & Services
             </h1>
-            <p className="font-quicksand text-base sm:text-lg text-[#EFF8F7]/85 font-normal leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-[#F4F8F7]/85 font-normal leading-relaxed">
               Explore our comprehensive range of evidence-based treatments covering musculoskeletal conditions, stroke rehabilitation, sports injuries, and advanced manual therapy.
             </p>
           </div>
@@ -46,14 +46,14 @@ export const ServicesPage = () => {
       </section>
 
       {/* Main Services Grid */}
-      <section className="py-16 md:py-24 bg-[#EFF8F7]">
+      <section className="py-16 md:py-24 bg-[#F4F8F7]">
         <Container>
           <ServiceGrid showSearch={true} />
         </Container>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white border-t thin-line-separator">
+      <section className="py-20 bg-white border-t thin-line-separator font-body">
         <Container>
           <SectionHeading
             eyebrow="PATIENT INFORMATION"
@@ -61,14 +61,14 @@ export const ServicesPage = () => {
             subtitle="Common inquiries about our clinical evaluation process, treatment expectations, and appointment booking."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 font-quicksand">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 bg-[#EFF8F7] border border-[#075A68]/15 space-y-2">
-                <h3 className="font-jura text-lg font-bold text-[#082F38] flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#075A68] shrink-0 mt-0.5" />
+              <div key={i} className="p-6 bg-[#F4F8F7] border border-[#1B8480]/15 space-y-2 rounded-2xl">
+                <h3 className="font-heading text-lg font-bold text-[#1E2A38] flex items-start gap-2">
+                  <HelpCircle className="w-5 h-5 text-[#1B8480] shrink-0 mt-0.5" />
                   {faq.q}
                 </h3>
-                <p className="text-sm text-[#17343B]/80 leading-relaxed pl-7">
+                <p className="text-sm text-[#6B7280] leading-relaxed pl-7">
                   {faq.a}
                 </p>
               </div>

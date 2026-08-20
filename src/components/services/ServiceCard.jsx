@@ -16,25 +16,25 @@ export const ServiceCard = ({ service, index, onClick }) => {
     >
       {/* Number & Service Name */}
       <div className="flex items-center gap-4 sm:gap-6 md:w-5/12">
-        <span className="font-jura text-xl sm:text-2xl font-bold text-[#C9952E] group-hover:text-[#075A68] transition-colors shrink-0">
+        <span className="font-heading text-xl sm:text-2xl font-bold text-[#1B8480] group-hover:text-[#14514F] transition-colors shrink-0">
           {formattedNumber}
         </span>
-        <h3 className="font-jura text-lg sm:text-xl font-bold text-[#082F38] group-hover:text-[#075A68] transition-colors">
+        <h3 className="font-heading text-lg sm:text-xl font-bold text-[#1E2A38] group-hover:text-[#1B8480] transition-colors">
           {service.title}
         </h3>
       </div>
 
       {/* Short Description */}
       <div className="md:w-5/12">
-        <p className="font-quicksand text-sm text-[#17343B]/75 leading-relaxed line-clamp-2">
+        <p className="font-body text-sm text-[#6B7280] leading-relaxed line-clamp-2">
           {service.shortDesc}
         </p>
       </div>
 
-      {/* Action Arrow */}
+      {/* Action Link: "Learn More →" */}
       <div className="md:w-2/12 flex items-center justify-end">
-        <div className="inline-flex items-center gap-2 text-xs font-quicksand font-bold text-[#075A68] group-hover:text-[#082F38]">
-          <span className="hidden sm:inline">Details</span>
+        <div className="inline-flex items-center gap-1.5 text-xs font-body font-bold text-[#1B8480] group-hover:text-[#14514F]">
+          <span>Learn More</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
         </div>
       </div>

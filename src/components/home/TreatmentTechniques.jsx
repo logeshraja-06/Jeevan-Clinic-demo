@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container } from '../common/Container';
 import { SectionHeading } from '../common/SectionHeading';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const TreatmentTechniques = () => {
   const techniques = [
@@ -68,23 +68,23 @@ export const TreatmentTechniques = () => {
                   onClick={() => setActiveIndex(idx)}
                   onMouseEnter={() => setActiveIndex(idx)}
                   className={`py-5 px-4 cursor-pointer transition-all duration-300 ${
-                    isActive ? 'bg-[#EFF8F7]' : 'hover:bg-gray-50'
+                    isActive ? 'bg-[#F4F8F7]' : 'hover:bg-gray-50'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <span className={`font-jura text-lg font-bold ${isActive ? 'text-[#C9952E]' : 'text-gray-400'}`}>
+                      <span className={`font-heading text-lg font-bold ${isActive ? 'text-[#1B8480]' : 'text-gray-400'}`}>
                         {String(idx + 1).padStart(2, '0')}
                       </span>
-                      <h3 className={`font-jura text-xl font-bold transition-colors ${
-                        isActive ? 'text-[#075A68]' : 'text-[#082F38]'
+                      <h3 className={`font-heading text-xl font-bold transition-colors ${
+                        isActive ? 'text-[#1B8480]' : 'text-[#1E2A38]'
                       }`}>
                         {tech.title}
                       </h3>
                     </div>
 
                     <ArrowRight className={`w-4 h-4 transition-all duration-300 ${
-                      isActive ? 'text-[#075A68] translate-x-1' : 'text-gray-300'
+                      isActive ? 'text-[#1B8480] translate-x-1.5' : 'text-gray-300'
                     }`} />
                   </div>
 
@@ -93,7 +93,7 @@ export const TreatmentTechniques = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="font-quicksand text-sm text-[#17343B]/80 leading-relaxed mt-2.5 pl-9"
+                      className="font-body text-sm text-[#6B7280] leading-relaxed mt-2.5 pl-9"
                     >
                       {tech.shortDesc}
                     </motion.p>
@@ -103,15 +103,15 @@ export const TreatmentTechniques = () => {
             })}
           </div>
 
-          {/* Right Column: Large Sharp Photograph (5 cols) */}
+          {/* Right Column: Sharp Photograph Preview (5 cols) */}
           <div className="lg:col-span-5 relative">
-            <div className="relative border border-gray-300 shadow-xl overflow-hidden min-h-[400px] lg:min-h-[480px]">
+            <div className="relative border border-gray-200 shadow-lg overflow-hidden min-h-[400px] lg:min-h-[480px]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={techniques[activeIndex].id}
                   src={techniques[activeIndex].image}
                   alt={techniques[activeIndex].title}
-                  initial={{ opacity: 0, scale: 1.05 }}
+                  initial={{ opacity: 0, scale: 1.04 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.4 }}
@@ -119,13 +119,13 @@ export const TreatmentTechniques = () => {
                 />
               </AnimatePresence>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#082F38]/90 via-[#082F38]/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#28363F]/90 via-[#28363F]/20 to-transparent pointer-events-none" />
 
               <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-                <div className="font-quicksand text-xs font-semibold uppercase tracking-widest text-[#C9952E]">
+                <div className="font-body text-xs font-semibold uppercase tracking-widest text-[#1B8480]">
                   Technique Demonstration
                 </div>
-                <h4 className="font-jura text-2xl font-bold text-white">
+                <h4 className="font-heading text-2xl font-bold text-white">
                   {techniques[activeIndex].title}
                 </h4>
               </div>

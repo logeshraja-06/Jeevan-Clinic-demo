@@ -1,51 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 import { clinicData } from '../../data/clinic';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[88vh] lg:min-h-[92vh] flex flex-col justify-between pt-28 pb-8 md:pt-36 md:pb-12 bg-[#082F38] text-white overflow-hidden">
-      {/* Full-width Photographic Background */}
+    <section className="relative w-full min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between pt-28 pb-8 md:pt-36 md:pb-12 bg-[#28363F] text-white overflow-hidden">
+      {/* Full-width Treatment Photography Background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-1000 scale-105"
         style={{ backgroundImage: `url('/images/clinic/hero_physio.png')` }}
       />
 
-      {/* Multi-layer Gradient Overlay for Optimal Text Readability */}
+      {/* Multi-layer Gradient Overlay (#28363F / #1B8480 / #14514F) */}
       <div className="absolute inset-0 z-10 hero-overlay-gradient hidden md:block" />
       <div className="absolute inset-0 z-10 hero-overlay-mobile md:hidden" />
 
-      {/* Main Content Area */}
+      {/* Content */}
       <Container className="relative z-20 my-auto">
         <div className="max-w-3xl space-y-6 text-left">
           
-          {/* Main Headline (Jura font, 64-90px desktop) */}
+          {/* Mixed Weight Hero Headline (Plus Jakarta Sans font) */}
           <motion.h1
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="font-jura text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.08] text-white"
+            className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.1] text-white font-normal"
           >
-            Restore Your Movement.<br />
-            <span className="gold-gradient-text">
-              Reclaim Your Life.
-            </span>
+            Restore Your <span className="font-extrabold text-white">Movement.</span><br />
+            Reclaim Your <span className="font-extrabold text-[#1B8480]">Life.</span>
           </motion.h1>
 
-          {/* Supporting Text (Quicksand font, max 2-3 lines) */}
+          {/* Supporting Statement (Inter font) */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-quicksand text-base sm:text-lg md:text-xl text-[#EFF8F7]/90 max-w-2xl font-normal leading-relaxed"
+            className="font-body text-base sm:text-lg md:text-xl text-[#F4F8F7]/90 max-w-2xl font-normal leading-relaxed"
           >
             Personalized physiotherapy and rehabilitation care designed to help you recover, move better and return to everyday life with confidence.
           </motion.p>
 
-          {/* Action Buttons */}
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +51,7 @@ export const Hero = () => {
           >
             <Button
               href="/contact"
-              variant="gold"
+              variant="primary"
               size="lg"
               showArrow
             >
@@ -65,33 +62,33 @@ export const Hero = () => {
               href="/services"
               variant="outline"
               size="lg"
-              className="!border-white/30 !text-white hover:!bg-white hover:!text-[#082F38]"
+              className="!border-white/40 !text-white hover:!bg-white hover:!text-[#1E2A38]"
             >
               Explore Treatments
             </Button>
           </motion.div>
 
-          {/* Minimal Info Line (No pills, no cards) */}
+          {/* Minimal Information Line */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="pt-4 font-quicksand text-xs sm:text-sm font-semibold tracking-wider text-[#EFF8F7]/70 flex items-center gap-3"
+            className="pt-4 font-body text-xs sm:text-sm font-medium tracking-wider text-[#F4F8F7]/75 flex items-center gap-3"
           >
-            <span className="w-2 h-2 rounded-full bg-[#C9952E]" />
+            <span className="w-2 h-2 rounded-full bg-[#1B8480]" />
             <span>BPT • MGR University • 5 Years in Healthcare</span>
           </motion.div>
 
         </div>
       </Container>
 
-      {/* Hero Bottom Editorial Detail */}
-      <Container className="relative z-20 pt-10">
-        <div className="pt-4 border-t thin-line-dark flex items-center justify-between font-quicksand text-xs uppercase tracking-[0.2em] text-[#EFF8F7]/60">
-          <span className="font-jura font-semibold tracking-normal text-[#EFF8F7]/90">
+      {/* Hero Bottom Detail Bar */}
+      <Container className="relative z-20 pt-8">
+        <div className="pt-4 border-t thin-line-dark flex items-center justify-between font-body text-xs uppercase tracking-[0.2em] text-[#F4F8F7]/60">
+          <span className="font-heading font-semibold tracking-normal text-[#F4F8F7]/90">
             JEEVAN PHYSIOTHERAPY CLINIC
           </span>
-          <span className="flex items-center gap-1 text-[#C9952E] font-medium animate-pulse">
+          <span className="flex items-center gap-1 text-[#1B8480] font-semibold animate-pulse">
             Scroll to explore ↓
           </span>
         </div>

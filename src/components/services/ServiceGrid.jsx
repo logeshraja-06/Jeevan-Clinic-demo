@@ -34,37 +34,37 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
       {showSearch && (
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-4 border-b thin-line-separator">
           {/* Category Filter Buttons */}
-          <div className="flex items-center gap-3 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-none font-quicksand">
+          <div className="flex items-center gap-3 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-none font-body">
             <button
               onClick={() => setSelectedCategory('all')}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-[4px] whitespace-nowrap transition-all ${
+              className={`px-5 py-2 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-[#075A68] text-white shadow-sm'
-                  : 'bg-white text-[#17343B] hover:bg-[#075A68]/10 border border-gray-200'
+                  ? 'bg-[#1B8480] text-white shadow-sm'
+                  : 'bg-white text-[#4D5255] hover:bg-[#1B8480]/10 border border-gray-200'
               }`}
             >
               All Treatments ({allServices.length})
             </button>
             <button
               onClick={() => setSelectedCategory('condition')}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-[4px] whitespace-nowrap transition-all flex items-center gap-1.5 ${
+              className={`px-5 py-2 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap transition-all flex items-center gap-1.5 ${
                 selectedCategory === 'condition'
-                  ? 'bg-[#075A68] text-white shadow-sm'
-                  : 'bg-white text-[#17343B] hover:bg-[#075A68]/10 border border-gray-200'
+                  ? 'bg-[#1B8480] text-white shadow-sm'
+                  : 'bg-white text-[#4D5255] hover:bg-[#1B8480]/10 border border-gray-200'
               }`}
             >
-              <Stethoscope className="w-3.5 h-3.5 text-[#C9952E]" />
+              <Stethoscope className="w-3.5 h-3.5" />
               Conditions ({allServices.filter(s => s.category === 'condition').length})
             </button>
             <button
               onClick={() => setSelectedCategory('technique')}
-              className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-[4px] whitespace-nowrap transition-all flex items-center gap-1.5 ${
+              className={`px-5 py-2 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap transition-all flex items-center gap-1.5 ${
                 selectedCategory === 'technique'
-                  ? 'bg-[#075A68] text-white shadow-sm'
-                  : 'bg-white text-[#17343B] hover:bg-[#075A68]/10 border border-gray-200'
+                  ? 'bg-[#1B8480] text-white shadow-sm'
+                  : 'bg-white text-[#4D5255] hover:bg-[#1B8480]/10 border border-gray-200'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#167A91]" />
+              <Sparkles className="w-3.5 h-3.5" />
               Techniques ({allServices.filter(s => s.category === 'technique').length})
             </button>
           </div>
@@ -77,19 +77,19 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
               placeholder="Search condition or treatment..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm font-quicksand rounded-[4px] bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#075A68] transition-all"
+              className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm font-body rounded-full bg-white border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#1B8480] transition-all"
             />
           </div>
         </div>
       )}
 
-      {/* Editorial List Layout */}
+      {/* List Layout */}
       {displayedServices.length === 0 ? (
         <div className="text-center py-16 bg-white border border-dashed border-gray-300">
-          <p className="font-quicksand text-gray-500 text-sm font-medium">No treatments found matching your search query.</p>
+          <p className="font-body text-[#6B7280] text-sm font-medium">No treatments found matching your search query.</p>
           <button
             onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}
-            className="mt-3 text-xs font-bold text-[#075A68] hover:underline"
+            className="mt-3 text-xs font-bold text-[#1B8480] hover:underline"
           >
             Reset filter
           </button>
@@ -98,13 +98,13 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
         <div className="space-y-14">
           {/* Section 1: Conditions We Help With */}
           <div>
-            <div className="flex items-center gap-3 mb-4 pb-2 border-b-2 border-[#075A68]">
-              <Stethoscope className="w-5 h-5 text-[#C9952E]" />
-              <h3 className="font-jura text-xl sm:text-2xl font-bold text-[#082F38]">
+            <div className="flex items-center gap-3 mb-4 pb-2 border-b-2 border-[#1B8480]">
+              <Stethoscope className="w-5 h-5 text-[#1B8480]" />
+              <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-[#1E2A38]">
                 CONDITIONS WE HELP WITH
               </h3>
             </div>
-            <div className="border-t thin-line-separator divide-y thin-line-separator">
+            <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
               {conditions.map((service, idx) => (
                 <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
               ))}
@@ -113,13 +113,13 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
 
           {/* Section 2: Treatment Techniques */}
           <div>
-            <div className="flex items-center gap-3 mb-4 pb-2 border-b-2 border-[#167A91]">
-              <Sparkles className="w-5 h-5 text-[#167A91]" />
-              <h3 className="font-jura text-xl sm:text-2xl font-bold text-[#082F38]">
+            <div className="flex items-center gap-3 mb-4 pb-2 border-b-2 border-[#1B8480]">
+              <Sparkles className="w-5 h-5 text-[#1B8480]" />
+              <h3 className="font-heading text-xl sm:text-2xl font-extrabold text-[#1E2A38]">
                 TREATMENT TECHNIQUES
               </h3>
             </div>
-            <div className="border-t thin-line-separator divide-y thin-line-separator">
+            <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
               {techniques.map((service, idx) => (
                 <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
               ))}
@@ -127,7 +127,7 @@ export const ServiceGrid = ({ limit, showSearch = true }) => {
           </div>
         </div>
       ) : (
-        <div className="border-t thin-line-separator divide-y thin-line-separator">
+        <div className="border-t thin-line-separator divide-y thin-line-separator bg-white shadow-sm">
           {displayedServices.map((service, idx) => (
             <ServiceCard key={service.id} service={service} index={idx} onClick={handleCardClick} />
           ))}

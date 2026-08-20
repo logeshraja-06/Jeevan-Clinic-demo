@@ -1,23 +1,22 @@
 import React from 'react';
 import { Container } from '../components/common/Container';
 import { Contact } from '../components/home/Contact';
-import { MapPin, Phone, Clock, MessageSquare } from 'lucide-react';
-import { clinicData } from '../data/clinic';
 
 export const ContactPage = () => {
   return (
-    <main className="pt-24 pb-16 space-y-12 bg-[#EEF7FA]">
+    <main className="pt-20 space-y-0 bg-[#F4F8F7]">
       {/* Header Banner */}
-      <section className="bg-gradient-to-r from-[#12343B] via-[#176B87] to-[#168F87] text-white py-16 md:py-20 relative overflow-hidden">
+      <section className="bg-[#28363F] text-white py-20 md:py-24 relative overflow-hidden">
         <Container>
           <div className="max-w-3xl space-y-4">
-            <span className="px-3.5 py-1.5 rounded-full bg-[#C9952E]/20 text-[#C9952E] font-bold text-xs uppercase tracking-widest border border-[#C9952E]/30">
-              BOOK AN APPOINTMENT
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            <div className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#1B8480]">
+              <span className="w-4 h-[2px] bg-[#1B8480]" />
+              <span>BOOK AN APPOINTMENT</span>
+            </div>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
               Contact Jeevan Physiotherapy Clinic
             </h1>
-            <p className="text-base sm:text-lg text-[#EEF7FA]/90 leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-[#F4F8F7]/85 font-normal leading-relaxed">
               We are here to assist you with physical evaluation, pain management, and custom rehabilitation sessions. Book an appointment or contact us directly.
             </p>
           </div>
